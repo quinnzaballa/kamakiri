@@ -6,7 +6,7 @@ I only created this because im bored, also helps those newbies out there how to 
 <br>
 
 > REMEMBER, MUST HAVE A PC WITH 4 cores 4 threads CPU, SSD/SDD/M.2 drive, incredibly Fast RAM `2xxxMhz ram is fine` **(or better)** For faster compilation!!<br><br>
-> REMEMBER, im not responsible for corrupted or un-bootable linux **It can be restored if you backed up them** so BACK UP THEM!
+> REMEMBER, im not responsible for corrupted or un-bootable linux **It can be restored if you backed them up** so BACK UP THEM!
 <br>
 <br>
 <br>
