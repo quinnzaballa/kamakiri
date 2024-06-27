@@ -46,3 +46,4 @@ To download go to this link [linux-kernel](https://mirrors.edge.kernel.org/pub/l
 Now Extract to `/home/username/Downloads` folder.<br>
 Now go to the current forked github `Release` Section and find the compatible `kernel.patch` for your current/compiling linux-kernel release version
 
+(To be continued)
