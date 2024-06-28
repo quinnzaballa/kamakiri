@@ -41,9 +41,49 @@ This would show your `linux-release version` mine was `6.8.7-zen1` Just focus on
 ## Download your fresh unmodified-linux kernel
 
 To download go to this link [linux-kernel](https://mirrors.edge.kernel.org/pub/linux/kernel/) and you should see some version identifiers *e.g.* `v6.x/`
+<br><br><br>
+
+## Extract and tidy up things!
+
+1. Extract to `/home/username/Downloads` folder.<br>
+2. Go to the current forked github `Release` Section and find the compatible `kernel.patch` for your current/compiling linux-kernel release version<br>
+3. Take your current kernel `.config` file, They're typically found at:<br>
+
+> `/usr/src/` You must know your current linux kernel name, do `uname -s` then you should find a folder same as the `uname -s` typed out.<br>
+> Go to here `/proc/` then search config without dots, you should find a file called `config.gz`, extract it and name it `.config`<br>
+> If ever you cant find it check `/boot/` find it there.
+
+<br>
+
+## Start compiling
+<br>
+
+Before we start compiling, make sure that everything is in the Linux-`kernel version` folder, both must be in the folder (`.config` and `kernel.patch`).
+
 <br><br>
 
-Now Extract to `/home/username/Downloads` folder.<br>
-Now go to the current forked github `Release` Section and find the compatible `kernel.patch` for your current/compiling linux-kernel release version
+# Lets start!
+<br>
 
-(To be continued)
+Open your terminal in the Linux-`kernel version` folder, then do the following command:
+```
+patch -p1 < kernel.patch
+```
+<br>
+
+Then we configure the config to be implemented to the kernel and updates them abit for better `make build` compatibility and for the kernel `.config` compatibility.<br>
+To update the `.config` do this command:
+```
+make menuconfig
+```
+
+
+
+
+
+
+
+
+
+
+
