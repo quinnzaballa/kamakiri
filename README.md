@@ -1,12 +1,16 @@
-# Kamakiri *(kernel.patch)* compatibility on available linux kernels
+# Kamakiri Patch Tutorial for Linux Kernels
+
+### Kamakiri *(kernel.patch)* compatibility on available linux kernels
 <br>
 
 I only created this because im bored, also helps those newbies out there how to patch *devio.c* ***(kamakiri patch)*** with their current kernel-release ver. and to be "User friendly".
 <br>
 <br>
 
-> REMEMBER, MUST HAVE A PC WITH 4 cores 4 threads CPU, SSD/SDD/M.2 drive, incredibly Fast RAM `2xxxMhz ram is fine` **(or better)** For faster compilation!!<br><br>
-> REMEMBER, im not responsible for corrupted or un-bootable linux **It can be restored if you backed them up** so BACK UP THEM!
+### IMPORTANT
+
+> **System Requirements**: A PC with at least 4 cores/4 threads CPU, SSD/SDD/M.2 drive, and fast RAM (2xxx MHz) or ***more better*** is recommended for faster compilation.<br><br>
+> **Backup**: Always back up your system before making changes. I am not responsible for corrupted or un-bootable Linux systems.
 <br>
 <br>
 <br>
