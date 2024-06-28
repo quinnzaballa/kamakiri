@@ -43,6 +43,12 @@ uname -r
 ```
 This would show your `linux-release version` mine was `6.8.7-zen1` Just focus on the 6.8.7, ***-zen1** is a patch for my Ryzen AMD CPU
 <br><br><br>
+# Arch-linux
+<br>
+
+> Worked on arch-linux, so everything should go smoothly? hopefully!
+
+<br><br><br>
 
 ## Download your fresh unmodified-linux kernel
 
