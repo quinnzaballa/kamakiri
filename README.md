@@ -10,7 +10,8 @@ I only created this because im bored, also helps those newbies out there how to 
 ### IMPORTANT
 
 > **System Requirements**: A PC with at least 4 cores/4 threads CPU, SSD/SDD/M.2 drive, and fast RAM (2xxx MHz) or ***more better*** is recommended for faster compilation.<br><br>
-> **Backup**: Always back up your system before making changes. I am not responsible for corrupted or un-bootable Linux systems.
+> **Backup**: Always back up your system before making changes. I am not responsible for corrupted or un-bootable Linux systems.<br><br>
+> It is also Recommended that you make your own kernel so your drivers wouldnt get f**ked up and incompatibility occurs upon booting
 <br>
 <br>
 <br>
@@ -50,7 +51,7 @@ To download go to this link [linux-kernel](https://mirrors.edge.kernel.org/pub/l
 ## Extract and tidy up things!
 
 1. Extract to `/home/username/Downloads` folder.<br>
-2. Go to the current forked github `Release` Section and find the compatible `kernel.patch` for your current/compiling linux-kernel release version<br>
+2. Go to the current forked github [`Release`](https://github.com/quinnzaballa/kamakiri/releases) Section and find the compatible `kernel.patch` for your current/compiling linux-kernel release version<br>
 3. Take your current kernel `.config` file, They're typically found at:<br>
 
 > `/usr/src/` You must know your current linux kernel name, do `uname -s` then you should find a folder same as the `uname -s` typed out.<br>
