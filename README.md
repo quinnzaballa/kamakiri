@@ -72,8 +72,10 @@ Before we start compiling, make sure that everything is in the Linux-`kernel ver
 
 Open your terminal in the Linux-`kernel version` folder, then do the following command:
 ```
-patch -p1 < kernel.patch
+patch < kernel-(version).patch
 ```
+> You will see another tutorial for this after running `patch` command
+
 <br>
 
 Then we configure the config to be implemented to the kernel and updates them abit for better `make build` compatibility and for the kernel `.config` compatibility.<br><br>
@@ -81,7 +83,7 @@ To update the `.config` do this command:
 ```
 make menuconfig
 ```
-Wait for abit and it should open up an interactive menu, Now go and select `Load` and leave the text as `.config` as you already renamed it inside the linux-`kernel version` folder.<br><br>
+Wait for abit and it should open up an interactive menu, Now go and select `Load` and leave the text as `.config` as you already renamed your current `.config` inside the linux-`kernel version` folder.<br><br>
 <br>
 
 ## GREAT! Lets compile
