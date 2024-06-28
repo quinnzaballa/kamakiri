@@ -51,7 +51,7 @@ To download go to this link [linux-kernel](https://mirrors.edge.kernel.org/pub/l
 ## Extract and tidy up things!
 
 1. Extract to `/home/username/Downloads` folder.<br>
-2. Go to the current forked github [`Release`](https://github.com/quinnzaballa/kamakiri/releases) Section and find the compatible `kernel.patch` for your current/compiling linux-kernel release version<br>
+2. Go to the current forked github [`Tags`](https://github.com/quinnzaballa/kamakiri/tags) Section and find the compatible `kernel.patch` for your current/compiling linux-kernel release version<br>
 3. Take your current kernel `.config` file, They're typically found at:<br>
 
 > `/usr/src/` You must know your current linux kernel name, do `uname -s` then you should find a folder same as the `uname -s` typed out.<br>
