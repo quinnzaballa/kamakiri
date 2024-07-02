@@ -59,7 +59,7 @@ To download go to this link [linux-kernel](https://mirrors.edge.kernel.org/pub/l
 # Arch-linux or Ubuntu/debian
 <br>
 
-> If you dont want to update/upgrade your kernel, just make the bzImage instead!
+> If you dont want to update/upgrade your kernel, just make the bzImage instead!<br>
 > Worked on arch-linux, so everything should go smoothly? hopefully!
 
 <br><br><br>
