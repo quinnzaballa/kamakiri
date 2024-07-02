@@ -59,6 +59,7 @@ To download go to this link [linux-kernel](https://mirrors.edge.kernel.org/pub/l
 # Arch-linux or Ubuntu/debian
 <br>
 
+> If you dont want to update/upgrade your kernel, just make the bzImage instead!
 > Worked on arch-linux, so everything should go smoothly? hopefully!
 
 <br><br><br>
@@ -108,7 +109,7 @@ patch < kernel-(version).patch
 To update the `.config` do this command:~~
 <br><br>
 
-Do this if you want to change more in your current `.config`
+Do this if you want to change more in your current `.config` (skip if youre only going to compile without changing the `.config`, specifically saying just copy the config file to the linux-`kernel version` folder and proceed making the kernel)
 <br>
 
 ```
@@ -119,6 +120,8 @@ Wait for abit and it should open up an interactive menu, Now go and select `Load
 
 ## GREAT! Lets compile
 <br>
+
+>For ubuntu/debian based linux, put `fakeroot` before the `make` command: `fakeroot make -j$(nproc)`<br>
 
 Simply put this command:
 ```
