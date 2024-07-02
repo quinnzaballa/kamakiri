@@ -17,7 +17,7 @@ I only created this because im bored, also helps those newbies out there how to 
 > **System Requirements**: A PC with at least 4 cores/4 threads CPU, SSD/SDD/M.2 drive, and fast RAM (2xxx MHz) or ***more better*** is recommended for faster compilation.<br><br>
 > **Backup**: Always back up your system before making changes. I am not responsible for corrupted or un-bootable Linux systems.<br><br>
 > It is also Recommended that you make your own kernel so your drivers wouldnt get f**ked up and incompatibility occurs upon booting<br><br>
-> 2024-06-28: ~~Ubuntu has different ways how to build a kernel. ill drop down here how to build for ease access and less research, wait for new tutorial!~~
+> 2024-06-28: ~~Ubuntu has different ways how to build a kernel. ill drop down here how to build for ease access and less research, wait for new tutorial!~~<br>
 > 2024-07-02: Updated to somewhat no problem ig? please push a `issue` if there is an issue..
 <br>
 <br>
