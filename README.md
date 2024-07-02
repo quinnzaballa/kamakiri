@@ -1,7 +1,7 @@
 # Kamakiri Patch Tutorial for Linux Kernels
 <br>
 
-> Todo: learn python to make a `auto patcher` and `auto make`
+> Todo: learn python to make a `auto patcher` and ~~`auto make`~~ `auto make with options`
 
 <br><br>
 
