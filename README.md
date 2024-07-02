@@ -61,12 +61,6 @@ To download go to this link [linux-kernel](https://mirrors.edge.kernel.org/pub/l
 
 > Worked on arch-linux, so everything should go smoothly? hopefully!
 
-> For ubuntu/debian based linux run this commands:
-```
-scripts/config --disable SYSTEM_TRUSTED_KEYS
-scripts/config --disable SYSTEM_REVOCATION_KEYS
-```
-
 <br><br><br>
 
 
@@ -79,6 +73,15 @@ scripts/config --disable SYSTEM_REVOCATION_KEYS
 > `/usr/src/` You must know your current linux kernel name, do `uname -s` then you should find a folder same as the `uname -s` typed out.<br>
 > Go to here `/proc/` then search config without dots, you should find a file called `config.gz`, extract it and name it `.config`.<br>
 > If ever you cant find it check `/boot/` find it there.
+
+### when compiling with ubuntu/debian based linux
+<br>
+
+For ubuntu/debian based linux run this commands: `after extracting`
+```
+scripts/config --disable SYSTEM_TRUSTED_KEYS
+scripts/config --disable SYSTEM_REVOCATION_KEYS
+``` 
 
 <br>
 
