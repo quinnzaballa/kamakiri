@@ -1,4 +1,9 @@
 # Kamakiri Patch Tutorial for Linux Kernels
+<br>
+
+> Todo: learn python to make a `auto patcher` and `auto make`
+
+<br><br>
 
 ### Kamakiri *(kernel.patch)* compatibility on available linux kernels
 <br>
@@ -12,7 +17,8 @@ I only created this because im bored, also helps those newbies out there how to 
 > **System Requirements**: A PC with at least 4 cores/4 threads CPU, SSD/SDD/M.2 drive, and fast RAM (2xxx MHz) or ***more better*** is recommended for faster compilation.<br><br>
 > **Backup**: Always back up your system before making changes. I am not responsible for corrupted or un-bootable Linux systems.<br><br>
 > It is also Recommended that you make your own kernel so your drivers wouldnt get f**ked up and incompatibility occurs upon booting<br><br>
-> 2024-06-28: Ubuntu has different ways how to build a kernel. ill drop down here how to build for ease access and less research, wait for new tutorial!
+> 2024-06-28: ~~Ubuntu has different ways how to build a kernel. ill drop down here how to build for ease access and less research, wait for new tutorial!~~
+> 2024-07-02: Updated to somewhat no problem ig? please push a `issue` if there is an issue..
 <br>
 <br>
 <br>
@@ -25,15 +31,16 @@ I only created this because im bored, also helps those newbies out there how to 
 ### Common Requirements Across All Distributions
 <br>
 
+**Fakeroot** `ubuntu/debian based linux only!` : This will trick the `make` and will create a mounted directory that it is running as root (based on what the internet said lel)<br><br>
 **Build Essentials**: Basic tools for compiling software.<br>
-**Kernel Headers**: Necessary for building kernel modules and other kernel-related components.<br>
+**Kernel Headers** `optional` : Necessary for building kernel modules and other kernel-related components.<br>
 **Make**: The build automation tool.<br>
 **GCC**: The GNU Compiler Collection.<br>
 **Bison**: A parser generator used in the configuration process.<br>
 **Flex**: A tool for generating scanners (programs that recognize lexical patterns in text).<br>
 **Libssl-dev**: Development files for OpenSSL libraries, needed for kernel features involving cryptography.<br>
-**Ncurses**: Libraries for text-based user interfaces, used in kernel menuconfig.<br>
-**Dracut**: Used for creating initramfs.img for vmlinuz (also known as bzImage). It's particularly useful for including various installed packages and drivers into the initial RAM filesystem (initramfs)
+**Ncurses** `recommended` : Libraries for text-based user interfaces, used in kernel menuconfig.<br>
+**Dracut** `optional (if youre not going to upgrade your kernel)` : Used for creating initramfs.img for vmlinuz (also known as bzImage). It's particularly useful for including various installed packages and drivers into the initial RAM filesystem (initramfs)
 <br><br><br>
 ## whats my current linux-release version?
 
@@ -49,10 +56,16 @@ This would show your `linux-release version` mine was `6.8.7-zen1` Just focus on
 To download go to this link [linux-kernel](https://mirrors.edge.kernel.org/pub/linux/kernel/) and you should see some version identifiers *e.g.* `v6.x/`
 <br><br><br>
 
-# Arch-linux
+# Arch-linux or Ubuntu/debian
 <br>
 
 > Worked on arch-linux, so everything should go smoothly? hopefully!
+
+> For ubuntu/debian based linux run this commands:
+```
+scripts/config --disable SYSTEM_TRUSTED_KEYS
+scripts/config --disable SYSTEM_REVOCATION_KEYS
+```
 
 <br><br><br>
 
@@ -72,7 +85,8 @@ To download go to this link [linux-kernel](https://mirrors.edge.kernel.org/pub/l
 ## Start compiling
 <br>
 
-Before we start compiling, make sure that everything is in the Linux-`kernel version` folder, both must be in the folder (`.config` and `kernel.patch`).
+Before we start compiling, make sure that everything is in the Linux-`kernel version` folder, both must be in the folder (`.config` and `kernel.patch`).<br>
+> For ubuntu/Debian based linux, Install `fakeroot` and run it as sudo if any *error* comes up.
 
 <br><br>
 
@@ -87,8 +101,13 @@ patch < kernel-(version).patch
 
 <br>
 
-Then we configure the config to be implemented to the kernel and updates them abit for better `make build` compatibility and for the kernel `.config` compatibility.<br><br>
-To update the `.config` do this command:
+~~Then we configure the config to be implemented to the kernel and updates them abit for better `make build` compatibility and for the kernel `.config` compatibility.<br><br>
+To update the `.config` do this command:~~
+<br><br>
+
+Do this if you want to change more in your current `.config`
+<br>
+
 ```
 make menuconfig
 ```
@@ -102,6 +121,15 @@ Simply put this command:
 ```
 make
 ```
+<br><br>
+
+Additionally, if youre not going to upgrade your kernel but only creating vmlinuz, just put this command instead:
+```
+make bzImage -j$(nproc)
+```
+
+This sould lessen your compile time to `10-30` Minutes
+
 <br>
 
 Also remember what i said? `..BER, MUST HAVE A PC WITH 4 cores 4 threads CPU...` Do this if you dont like to fiddle around or use the pc when compiling:
